@@ -1,7 +1,7 @@
 import styled, {keyframes} from 'styled-components'
 
 const Styles = styled.section`
-    max-width: 320px;
+    max-width: 300px;
     .form__input{
     margin-top: 30px;
     background: #fff;
