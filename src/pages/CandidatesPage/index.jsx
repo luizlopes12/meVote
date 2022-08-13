@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Styles from './styled'
 const CandidatesPage = () => {
   return (
-    <div>CandidatesPage</div>
+    <Styles>CandidatesPage</Styles>
   )
 }
 
