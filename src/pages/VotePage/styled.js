@@ -33,10 +33,10 @@ const Styles = styled.section`
         flex-direction: column;
         margin-top: 80px;
         .__image{
-            width: 55px;
+            width: 80px;
         }
         .__text{
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: #202020;
         }
     }

@@ -5,14 +5,14 @@ const Styles = styled.section`
     .form__input{
     margin-top: 30px;
     background: #fff;
-    box-shadow: 0px 4px 25px 0px #00000047;
+    box-shadow: ${props => props.shadow? '0px 10px 25px 0px #33C50040':'0px 10px 25px 0px #FA262640'};
     padding: 40px 30px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     p{
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-weight: bold;
     }
     input{
@@ -29,9 +29,16 @@ const Styles = styled.section`
     }
     .invalid__badge{
         position: absolute;
-        height: 30px;
+        height: 40px;
         width: 8px;
-        background: red;
+        background: #E21D1D;
+        border-radius: 12px 0 0 12px;
+    }
+    .valid__badge{
+        position: absolute;
+        height: 40px;
+        width: 8px;
+        background: #33C500;
         border-radius: 12px 0 0 12px;
     }
     }
@@ -47,6 +54,15 @@ const Styles = styled.section`
             padding: 15px;
             border-radius: 12px;
         }
+        .__disabled{
+            background: #929292;
+        }
+    }
+    .red_shadow{
+            box-shadow: 0px 10px 25px 0px #FA262640;
+    }
+    .green_shadow{
+        box-shadow: 0px 10px 25px 0px #33C50040;
     }
 `;
 
