@@ -24,6 +24,7 @@ const Styles = styled.section`
         padding: 4px 4px 4px 12px;
         outline: none;
         width: 100%;
+        font-size: 1.4rem;
     }
     .invalid__text{
         color: #E21D1D;
@@ -44,7 +45,7 @@ const Styles = styled.section`
     }
     }
     .form__btn{
-        margin-top: 35px;
+        margin-top: 45px;
         button{
             width: 100%;
             font-size: 1.5rem;
