@@ -60,7 +60,7 @@ const Styles = styled.section`
     width: 100%;
     height: 100vh;
     background: rgb(255,247,136);
-    background: linear-gradient(145deg, rgba(255,247,136,1) 0%, rgba(244,228,9,1) 36%, rgba(255,209,0,1) 100%);
+    background: linear-gradient(150deg, rgba(255,247,136,1) 0%, rgba(244,228,9,1) 50%, rgba(255,209,0,1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;

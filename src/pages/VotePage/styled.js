@@ -20,6 +20,9 @@ const Styles = styled.section`
     width: 100%;
     height: 100vh;
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .welcome{
         width: 100%;
         display: flex;
@@ -29,10 +32,11 @@ const Styles = styled.section`
         flex-direction: column;
         margin-top: 80px;
         .__image{
-            width: 80px;
+            width: 55px;
         }
         .__text{
-            font-size: 2.1rem;
+            font-size: 1.4rem;
+            color: #202020;
         }
     }
     .footer{
