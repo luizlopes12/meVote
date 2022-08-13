@@ -55,6 +55,10 @@ const Styles = styled.section`
             border: none;
             padding: 15px;
             border-radius: 12px;
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
         }
         .__disabled{
             background: #929292;

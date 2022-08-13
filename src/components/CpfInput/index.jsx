@@ -1,4 +1,5 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState} from 'react'
+import { Link } from 'react-router-dom'
 import Styles from './styled'
 const CpfInput = () => {
   const [inputValue, setInputValue] = useState('')
@@ -82,7 +83,7 @@ const CpfInput = () => {
       {inputValue.length === 11 ? (
           <>
           {cpfVerified?(
-            <button>Continuar :)</button>
+            <button><Link to="/candidates">Continuar :)</Link></button>
           ):(
             <button className='__disabled'>Continuar :(</button>
           )
