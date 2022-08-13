@@ -16,7 +16,7 @@ const showVotePage = keyframes`
 const Styles = styled.section`
     animation: 6.5s ${showVotePage} ease-in-out;
     position: fixed;
-    margin-top: 50px;
+    margin-top: 40px;
     top: 0;
     width: 100%;
     height: 100vh;
