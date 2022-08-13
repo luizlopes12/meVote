@@ -5,7 +5,8 @@ const Styles = styled.section`
     .form__input{
     margin-top: 30px;
     background: #fff;
-    box-shadow: ${props => props.shadow? '0px 10px 25px 0px #33C50040':'0px 10px 25px 0px #FA262640'};
+    transition: all .2s ease-in-out;
+    box-shadow: ${props => props.shadow == 0? '0px 4px 25px 0px #00000047': props.shadow == 1? '0px 10px 25px 0px #33C50040':'0px 10px 25px 0px #FA262640'};
     padding: 40px 30px;
     border-radius: 12px;
     display: flex;

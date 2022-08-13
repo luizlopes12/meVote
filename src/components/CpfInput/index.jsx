@@ -44,7 +44,7 @@ const CpfInput = () => {
     setCpfVerified(verifyCPF(e.target.value))
   }
   return (
-    <Styles shadow={cpfVerified}>
+    <Styles shadow={inputValue.length == 11 ? cpfVerified ? 1 : 2 :0}>
       <div className='form__input'>
         {inputValue.length == 11 ? (
         <>
