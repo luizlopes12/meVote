@@ -38,11 +38,17 @@ const showText = keyframes`
     0%{
         transform: translateY(175px);
     }
-    80%{
+    40%{
         transform: translateY(175px);
     }
-    100%{
+    60%{
         transform: translateY(0);
+    }
+    90%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(175px);
     }
 `
 
@@ -93,13 +99,13 @@ const Styles = styled.section`
     }
     .__text{
         z-index: 1;
-        animation: 4s ${showText} ease-in-out;
+        animation: 6s ${showText} ease-in-out;
         font-size: 1.7rem;
         font-weight: bold;
-        width: 250px
+        width: 258px;
+        transform: translateY(175px);
     }
 }
-
 `;
 
 export default Styles

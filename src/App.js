@@ -1,6 +1,7 @@
 import React from 'react';
 import {GlobalStyle} from './global/GlobalStyles'
 import SplashPage from './pages/SplashPage';
+import VotePage from './pages/VotePage';
 // import API from './config/API';
 
 
@@ -18,6 +19,7 @@ function App() {
     <>
       <GlobalStyle/>
       <SplashPage/>
+      <VotePage/>
     </>
 
   );
