@@ -16,6 +16,7 @@ const showVotePage = keyframes`
 const Styles = styled.section`
     animation: 6.5s ${showVotePage} ease-in-out;
     position: fixed;
+    margin-top: 50px;
     top: 0;
     width: 100%;
     height: 100vh;
@@ -35,7 +36,7 @@ const Styles = styled.section`
             width: 55px;
         }
         .__text{
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             color: #202020;
         }
     }
@@ -44,7 +45,7 @@ const Styles = styled.section`
         display: flex;
         justify-content: center;
         color: #777777;
-        font-size: 1.1rem;
+        font-size: .75rem;
         margin-top: 100px;
     }
 

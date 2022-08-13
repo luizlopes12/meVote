@@ -1,33 +1,46 @@
 import styled, {keyframes} from 'styled-components'
 
 const Styles = styled.section`
-
+    width: 80%;
     .form__input{
     margin-top: 30px;
     background: #fff;
     box-shadow: 0px 4px 25px 0px #00000047;
-    padding: 20px;
+    padding: 40px 30px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     p{
-        font-size: .8rem;
+        font-size: 1.1rem;
         font-weight: bold;
     }
     input{
         border: 1px solid #ccc;
         background: #e9e9e9;
         border-radius: 10px;
-        height: 30px;
-        padding: 4px 4px 4px 8px;
+        height: 40px;
+        padding: 4px 4px 4px 12px;
         outline: none;
+        width: 100%;
+    }
+    .invalid__text{
+        color: #E21D1D;
+    }
+    .invalid__badge{
+        position: absolute;
+        height: 30px;
+        width: 8px;
+        background: red;
+        border-radius: 12px 0 0 12px;
     }
     }
     .form__btn{
-        margin-top: 30px;
+        margin-top: 35px;
         button{
             width: 100%;
+            font-size: 1.5rem;
+            font-weight: 500;
             background: #202020;
             color: #fff;
             border: none;

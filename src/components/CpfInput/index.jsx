@@ -22,12 +22,16 @@ const CpfInput = () => {
     if (Resto !== parseInt(strCPF.substring(10, 11) ) ) return false;
     return true;
 }
-console.log(verifyCPF('49371955819'))
+  const handleChangeCpf = (e) =>{
+    setInputValue(e.target.value)
+  }
   return (
     <Styles>
       <div className="form__input">
         <p>Insira seu CPF</p>
-        <input type="number" value={inputValue} onChange={(e)=>setInputValue(e.target.value)}/>
+        <div className="input__container">
+        <input type="number" value={inputValue} onChange={handleChangeCpf}/>
+        </div>
       </div>
       <div className="form__btn">
         <button>Continuar :|</button>
