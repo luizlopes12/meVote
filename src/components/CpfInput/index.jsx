@@ -50,7 +50,7 @@ const CpfInput = () => {
   return (
     <Styles shadow={inputValue.length === 11 ? cpfVerified ? 1 : 2 :0}>
       <div className='form__input'>
-        {inputValue.length === 11 ? (
+        {inputValue.length >= 11 ? (
         <>
         {cpfVerified?(
           <>

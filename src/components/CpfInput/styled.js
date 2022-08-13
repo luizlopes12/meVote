@@ -24,7 +24,7 @@ const Styles = styled.section`
         padding: 4px 4px 4px 12px;
         outline: none;
         width: 100%;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
     .invalid__text{
         color: #E21D1D;
