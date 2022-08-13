@@ -1,7 +1,7 @@
 import styled, {keyframes} from 'styled-components'
 
 const Styles = styled.section`
-    width: 80%;
+    max-width: 320px;
     .form__input{
     margin-top: 30px;
     background: #fff;
@@ -25,6 +25,11 @@ const Styles = styled.section`
         outline: none;
         width: 100%;
         font-size: 1.3rem;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+  margin: 0;
+        }
     }
     .invalid__text{
         color: #E21D1D;
