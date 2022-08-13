@@ -27,16 +27,16 @@ const Styles = styled.section`
     .welcome{
         width: 100%;
         display: flex;
-        gap: 15px;
+        gap: 20px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         margin-top: 80px;
         .__image{
-            width: 80px;
+            width: 70px;
         }
         .__text{
-            font-size: 2rem;
+            font-size: 1.7rem;
             color: #202020;
         }
     }
