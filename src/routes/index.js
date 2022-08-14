@@ -1,16 +1,18 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React,{useContext} from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import SplashPage from '../pages/SplashPage';
 import CPFPage from '../pages/CPFPage';
 import CandidatesPage from '../pages/CandidatesPage';
+import { AuthContext } from '../providers/auth'
 
 
 const RoutesManager = () => {
+  const {user} = useContext(AuthContext)
   return (
     <Router>
       <Routes>
         <Route path="/" element={<><SplashPage /> <CPFPage/></>} />
-        <Route path="/candidates" element={<CandidatesPage/>} />
+        <Route path="/candidates" element={user.cpf.length > 1 ? <CandidatesPage/>:<Navigate to="/" />} />
       </Routes>
     </Router>
   );

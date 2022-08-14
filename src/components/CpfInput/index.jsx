@@ -86,7 +86,9 @@ const CpfInput = () => {
       {inputValue.length === 11 ? (
           <>
           {cpfVerified?(
-            <button><Link to="/candidates">Continuar :)</Link></button>
+            <Link to="/candidates">
+            <button>Continuar :)</button>
+            </Link>
           ):(
             <button className='__disabled'>Continuar :(</button>
           )

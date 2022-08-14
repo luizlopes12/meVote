@@ -73,6 +73,7 @@ const Styles = styled.section`
     }
 }
 .splash2{
+    background: #fff;
     animation: 3s ${splashAnimation2} ease-in-out;
     position: fixed;
     top: 0;
