@@ -11,7 +11,7 @@ const SplashPage = () => {
         </section>
         <section className='splash2'>
         <div className="container">
-            <p className="__text">Desenvolvido por alunos</p>    
+            <p className="__text">Desenvolvido por</p>    
             <div className='__divider'>
             <img className='__image' src={logofatec} alt="meVote logo" />
             </div>
