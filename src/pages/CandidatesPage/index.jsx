@@ -76,20 +76,36 @@ const CandidatesPage = () => {
         </section>
         </section>
       ):(
-      <section className='list'>
-      {candidatesData.map((item, key)=>(
-      <div className="__card" id={key}>
-      <div className="candidate">
-      <div className="__image">
+      candidatesData.length > 0 ? (
+        <section className='list'>
+        {candidatesData.map((item, key)=>(
+        <div className="__card" id={key}>
+        <div className="candidate">
+        <div className="__image">
+        </div>
+        <div className="__text">
+          <p className='__lbl'>{item.label}</p>
+        </div>
+        </div>
+        <button className='voteBtn' onClick={()=>openModal(item)}>Votar</button>
       </div>
-      <div className="__text">
-        <p className='__lbl'>{item.label}</p>
-      </div>
-      </div>
-      <button className='voteBtn' onClick={()=>openModal(item)}>Votar</button>
+      ))}
+      </section>
+      ):(
+        <section className='list'>
+    <div className="loading">
+        <div className="circle"></div>
+        <div className="circle"></div>
+        <div className="circle"></div>
+        <div className="shadow"></div>
+        <div className="shadow"></div>
+        <div className="shadow"></div>
+        <span>Carregando</span>
     </div>
-    ))}
     </section>
+
+      )
+
       )}
       {modal && (
       <div className="confirmModal">
