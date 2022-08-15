@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 const API = axios.create({
-    baseURL: 'https://me-vote-backend.vercel.app'
+    baseURL: 'https://me-vote.herokuapp.com'
 })
 
 
