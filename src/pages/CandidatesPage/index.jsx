@@ -18,7 +18,6 @@ const CandidatesPage = () => {
     API.get(`/votes/verify/${user.cpf}`)
     .then((response)=>{
       setUserWasVoted(response.data)
-      console.log(response.data)
     })
     if(!userWasVoted){
       API.get('/candidates/list')
