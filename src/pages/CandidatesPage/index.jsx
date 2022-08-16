@@ -91,7 +91,8 @@ const CandidatesPage = () => {
       ))}
       </section>
       ):(
-        <section className='list'>
+        
+    <div className="load__container">
     <div className="loading">
         <div className="circle"></div>
         <div className="circle"></div>
@@ -101,8 +102,7 @@ const CandidatesPage = () => {
         <div className="shadow"></div>
         <span>Carregando</span>
     </div>
-    </section>
-
+b     </div>
       )
 
       )}

@@ -276,6 +276,15 @@ const Styles = styled.section`
         width: 100%;
         }
     }
+
+/*
+///////////////
+Terminar
+//////////////
+    .load__container{
+        background: ;
+    }
+    */
 `;
 
 export default Styles
