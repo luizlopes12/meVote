@@ -49,20 +49,27 @@ const Styles = styled.section`
             width: 90%;
             margin: auto;
             background-color: #fff;
-            padding: 18px 3px;
+            padding: 0px 3px 18px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 5px;
             margin-bottom: 20px;
             .candidate{
                 display: flex;
+                justify-content: center;
                 gap: 10px;
                 padding: 10px 40px;
                 .__image{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #000;
+                    font-size: 5rem;
+                    font-weight: 600;
                     background: #ccc;
                     border-radius: 50%;
-                    width: 60px;
-                    height: 60px;
+                    width: 100px;
+                    height: 100px;
                     img{
                     width: 60px;
                     height: 60px;

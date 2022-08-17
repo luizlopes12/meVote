@@ -82,9 +82,9 @@ const CandidatesPage = () => {
         <div className="__card" id={key}>
         <div className="candidate">
         <div className="__image">
+        <p className='__lbl'>{item.label}</p>
         </div>
         <div className="__text">
-          <p className='__lbl'>{item.label}</p>
         </div>
         </div>
         <button className='voteBtn' onClick={()=>openModal(item)}>Votar</button>
