@@ -54,12 +54,17 @@ const Styles = styled.section`
             flex-direction: column;
             gap: 20px;
             margin-top: 80px;
+            .__logo{
+                img{
+                    width: 150px;
+                }
+            }
             .__title{
                 text-align: center;
                 width: 70%;
                 line-height: 1.8rem;
                 color: #FF7528;
-                font-size: 1.8rem;
+                font-size: 1.4rem;
                 font-weight: 600;
             }
             .__subtitle{
