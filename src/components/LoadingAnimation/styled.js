@@ -3,9 +3,6 @@ const loadEnding = keyframes`
     0%{
         transform: translateY(0);
     }
-    90%{
-        transform: translateY(0);
-    }
     100%{
         transform: translateY(-100%);
     }
