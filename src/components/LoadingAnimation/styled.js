@@ -86,8 +86,8 @@ const Styles = styled.section`
     left:10%;
 }
 .circle{
-    width:20px;
-    height:20px;
+    width:40px;
+    height:40px;
     position: absolute;
     border-radius: 50%;
     background-color: #dbdbdb;
