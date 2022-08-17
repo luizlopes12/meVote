@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components'
+import styled, {keyframes, css} from 'styled-components'
 
 const appear = keyframes`
     0%{
@@ -39,7 +39,17 @@ const shadow = keyframes`
         opacity: .4;
     }
 `
-
+const loadEnding = keyframes`
+    0%{
+        transform: translateY(0);
+    }
+    90%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+`;
 const Styles = styled.section`
     min-width: 100%;
     min-height: 100vh;
@@ -210,7 +220,7 @@ const Styles = styled.section`
     height:60px;
     position: absolute;
     left:50%;
-    top:50%;
+    top:80%;
     transform: translate(-50%, -50%);
 }
 .circle{
@@ -263,7 +273,7 @@ const Styles = styled.section`
     top:75px;
     font-size: 20px;
     letter-spacing: 6px;
-    color: #202020;
+    color: #DBDBDB;
     left:10%;
 }
 
@@ -277,14 +287,37 @@ const Styles = styled.section`
         }
     }
 
-/*
-///////////////
-Terminar
-//////////////
     .load__container{
-        background: ;
-    }
-    */
+        animation: ${props => (props.loadEnd ? css`${loadEnding} 4s ease-in-out` : '')};
+        transform: translateY(100%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: linear-gradient(349.97deg, #07070C 1.46%, rgba(49, 49, 82, 0) 98.9%),
+        linear-gradient(0deg, #08080D, #08080D);
+        display: flex;
+        justify-content: center;
+        .event__infos{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 100px;
+            .__title{
+                text-align: center;
+                width: 70%;
+                line-height: 1.8rem;
+                color: #FF7528;
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+            .__subtitle{
+                color: #fff;
+                font-size: 1.2rem;
+            }
+        }
+    }   
 `;
 
 export default Styles

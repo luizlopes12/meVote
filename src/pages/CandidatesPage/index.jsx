@@ -5,6 +5,7 @@ import API from '../../config/API'
 import Styles from './styled'
 import logo from '../../img/searchpagelogo.png'
 import successIcon from '../../img/success.png'
+import eventLogo from '../../img/event_logo.png'
 const CandidatesPage = () => {
   const {user} = useContext(AuthContext)
   const [candidatesData, setCandidatesData] = useState([])
@@ -56,7 +57,30 @@ const CandidatesPage = () => {
 
   }
   return (
-    <Styles modalDisplay={modal} scrollLocation={window.scrollY} successModalDisplay={successModal}>
+    <Styles modalDisplay={modal} loadEnd={candidatesData.length > 0} scrollLocation={window.scrollY} successModalDisplay={successModal}>
+          <div className="load__container">
+      <div className="event__infos">
+        <div className="__logo">
+          <img src={eventLogo} alt="Logo do evento" />
+        </div>
+        <div className="__title">
+        Encontro Cervejeiro - Registro 2022
+        </div>
+        <div className="__subtitle">
+        Voto online
+        </div>
+      </div>
+    <div className="loading">
+        <div className="circle"></div>
+        <div className="circle"></div>
+        <div className="circle"></div>
+        <div className="shadow"></div>
+        <div className="shadow"></div>
+        <div className="shadow"></div>
+        <span>Carregando</span>
+    </div>
+    </div>
+      
       <section className='info'>
         <div className="__container">
           <div className="__options">
@@ -75,7 +99,6 @@ const CandidatesPage = () => {
         </section>
         </section>
       ):(
-      candidatesData.length > 0 ? (
         <section className='list'>
         {candidatesData.map((item, key)=>(
         <div className="__card" id={key}>
@@ -90,21 +113,6 @@ const CandidatesPage = () => {
       </div>
       ))}
       </section>
-      ):(
-        
-    <div className="load__container">
-    <div className="loading">
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="shadow"></div>
-        <div className="shadow"></div>
-        <div className="shadow"></div>
-        <span>Carregando</span>
-    </div>
-b     </div>
-      )
-
       )}
       {modal && (
       <div className="confirmModal">
