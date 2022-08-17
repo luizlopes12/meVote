@@ -147,7 +147,13 @@ const Styles = styled.section`
                     color: #000;
                     transition: all .2s ease-in-out;
                     &:hover{
-                        filter: brightness(.5);
+                        filter: brightness(.8);
+                    }
+                    &:focus{
+                        filter: brightness(.8);
+                    }
+                    &:active{
+                        filter: brightness(.8);
                     }
                 }
                 .cancel{
@@ -155,7 +161,13 @@ const Styles = styled.section`
                     color: #fff;
                     transition: all .2s ease-in-out;
                     &:hover{
-                        filter: brightness(.5);
+                        filter: brightness(.8);
+                    }
+                    &:focus{
+                        filter: brightness(.8);
+                    }
+                    &:active{
+                        filter: brightness(.8);
                     }
                 }
             }
