@@ -63,17 +63,19 @@ const Styles = styled.section`
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    color: #000;
-                    font-size: 5rem;
+                    font-size: 3.2rem;
                     font-weight: 600;
-                    background: #ccc;
+                    background: #CF4F08;
                     border-radius: 50%;
-                    width: 100px;
-                    height: 100px;
+                    width: 60px;
+                    height: 60px;
                     img{
                     width: 60px;
                     height: 60px;
                     border-radius: 50%;
+                    }
+                    p{
+                        color: #fff;
                     }
                 }
                 .__text{
