@@ -64,7 +64,7 @@ const Styles = styled.section`
             }
             .__subtitle{
                 color: #fff;
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
         }
     }   
