@@ -6,7 +6,8 @@ import { useScrollBlock } from '../../hooks/useScrollBlock'
 const LoadingAnimation = () => {
 const {contentLoaded} = useContext(AuthContext)
 const [blockScroll, allowScroll] = useScrollBlock()
-  contentLoaded ? allowScroll():blockScroll()
+  contentLoaded ? blockScroll() : allowScroll()
+
   return (
     <Styles isLoaded={contentLoaded}>
     <div className="load__container">
