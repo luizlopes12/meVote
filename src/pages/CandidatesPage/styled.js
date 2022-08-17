@@ -145,15 +145,17 @@ const Styles = styled.section`
                 .confirm{
                     background: #71EF45;
                     color: #000;
+                    transition: all .2s ease-in-out;
                     &:hover{
-                        filter: brightness(.2);
+                        filter: brightness(.5);
                     }
                 }
                 .cancel{
                     background: #E21D1D;
                     color: #fff;
+                    transition: all .2s ease-in-out;
                     &:hover{
-                        filter: brightness(.2);
+                        filter: brightness(.5);
                     }
                 }
             }
