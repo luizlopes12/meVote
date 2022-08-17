@@ -6,7 +6,7 @@ import Styles from './styled'
 import logo from '../../img/searchpagelogo.png'
 import successIcon from '../../img/success.png'
 const CandidatesPage = () => {
-  const {user, setContentLoaded} = useContext(AuthContext)
+  const {user,contentLoaded,setContentLoaded} = useContext(AuthContext)
   const [candidatesData, setCandidatesData] = useState([])
   const [userWasVoted, setUserWasVoted] = useState(false)  
   const [modal, setModal] = useState(false)
@@ -34,6 +34,7 @@ const CandidatesPage = () => {
     setModal(true)
   }
   modal ? blockScroll() : allowScroll()
+  contentLoaded ? allowScroll() : blockScroll()
 
   const confirmModal = () =>{
     setSuccessModal(true)
