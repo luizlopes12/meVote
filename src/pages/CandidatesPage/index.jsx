@@ -56,9 +56,9 @@ const CandidatesPage = () => {
         candidateId: candidate
       }).then(()=>{
         confirmModal()
+        allowScroll()
       })
     }
-
   }
   return (
     <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
