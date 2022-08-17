@@ -5,9 +5,8 @@ import API from '../../config/API'
 import Styles from './styled'
 import logo from '../../img/searchpagelogo.png'
 import successIcon from '../../img/success.png'
-import eventLogo from '../../img/event_logo.png'
 const CandidatesPage = () => {
-  const {user} = useContext(AuthContext)
+  const {user, setContentLoaded} = useContext(AuthContext)
   const [candidatesData, setCandidatesData] = useState([])
   const [userWasVoted, setUserWasVoted] = useState(false)  
   const [modal, setModal] = useState(false)
@@ -24,6 +23,7 @@ const CandidatesPage = () => {
       API.get('/candidates/list')
       .then((candidates)=>{
           setCandidatesData(candidates.data)
+          setContentLoaded(true)
       })
     }
 
@@ -57,29 +57,7 @@ const CandidatesPage = () => {
 
   }
   return (
-    <Styles modalDisplay={modal} loadEnd={candidatesData.length > 0} scrollLocation={window.scrollY} successModalDisplay={successModal}>
-      <div className="load__container">
-      <div className="event__infos">
-        <div className="__logo">
-          <img src={eventLogo} alt="Logo do evento" />
-        </div>
-        <div className="__title">
-        Encontro Cervejeiro - Registro 2022
-        </div>
-        <div className="__subtitle">
-        Voto online
-        </div>
-      </div>
-    <div className="loading">
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="shadow"></div>
-        <div className="shadow"></div>
-        <div className="shadow"></div>
-        <span>Carregando</span>
-    </div>
-    </div>
+    <Styles modalDisplay={modal} scrollLocation={window.scrollY} successModalDisplay={successModal}>
       
       <section className='info'>
         <div className="__container">
