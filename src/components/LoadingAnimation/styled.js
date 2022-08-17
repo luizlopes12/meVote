@@ -56,7 +56,7 @@ const Styles = styled.section`
             align-items: center;
             flex-direction: column;
             gap: 20px;
-            margin-top: 100px;
+            margin-top: 50px;
             .__title{
                 text-align: center;
                 width: 70%;
