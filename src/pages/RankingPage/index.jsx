@@ -7,6 +7,8 @@ const RankingPage = () => {
     API.get('/candidates/ranking')
     .then((response)=>{
       setVotesData(response.data)
+  console.log(response.data)
+
     })
   },[])
   return (
@@ -16,11 +18,25 @@ const RankingPage = () => {
               Ranking de Votos
           </div>
           <div className="__subtitle">
-              {votesData.length} Participantes
+              ({votesData.length} Participantes)
           </div>
       </header>
       <section className="listing">
-        {votesData.map((item)=>item.votes)}
+        <div className="__header">
+        {votesData.map((item)=>{
+          <>
+          <div className="info1">
+          <p>Equipe</p>
+          {item.label}
+        </div>
+        <div className="info2">
+          <p>Votos</p>
+          {item.votes}
+        </div>
+      </>
+        })}
+
+        </div>
       </section>
     </Styles>
   )
