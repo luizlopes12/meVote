@@ -1,4 +1,4 @@
-import styled, {keyframes,css} from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 const appear = keyframes`
     0%{
@@ -11,20 +11,7 @@ const appear = keyframes`
     }
 `
 
-const displayThat = keyframes`
-    0%{
-        display: none;
-    }
-    80%{
-        display: none;
-    }
-    100%{
-        display: block;
-    }
-`;
-
 const Styles = styled.section`
-    animation: ${props => (props.contentLoaded ? css`${displayThat} 3s ease-in-out` : '')};
     min-width: 100%;
     min-height: 100vh;
     background: rgb(255,247,136);
