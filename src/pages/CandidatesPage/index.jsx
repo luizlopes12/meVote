@@ -28,7 +28,7 @@ const CandidatesPage = () => {
     }
 
 
-  },[])
+  },[user.cpf,userWasVoted])
   const openModal = (item) =>{
     setModalData([item])
     setModal(true)
@@ -58,7 +58,7 @@ const CandidatesPage = () => {
   }
   return (
     <Styles modalDisplay={modal} loadEnd={candidatesData.length > 0} scrollLocation={window.scrollY} successModalDisplay={successModal}>
-          <div className="load__container">
+      <div className="load__container">
       <div className="event__infos">
         <div className="__logo">
           <img src={eventLogo} alt="Logo do evento" />

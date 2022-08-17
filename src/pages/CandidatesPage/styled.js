@@ -288,12 +288,13 @@ const Styles = styled.section`
     }
 
     .load__container{
-        animation: ${props => (props.loadEnd ? css`${loadEnding} 4s ease-in-out` : '')};
+        animation: ${props => (props.loadEnd ? css`${loadEnding} 4s` : css`translateY(0%)`)};
         transform: translateY(100%);
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100%;
         top: 0;
+        
         background: linear-gradient(349.97deg, #07070C 1.46%, rgba(49, 49, 82, 0) 98.9%),
         linear-gradient(0deg, #08080D, #08080D);
         display: flex;
