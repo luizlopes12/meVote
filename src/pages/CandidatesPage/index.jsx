@@ -30,10 +30,10 @@ const CandidatesPage = () => {
 
   },[user.cpf,userWasVoted,setContentLoaded])
   const openModal = (item) =>{
+    blockScroll()
     setModalData([item])
     setModal(true)
   }
-  modal ? blockScroll() : allowScroll()
 
   const confirmModal = () =>{
     setSuccessModal(true)
@@ -44,6 +44,10 @@ const CandidatesPage = () => {
     }, 5000)
   }
 
+  const cancelVote = () =>{
+    setModal(false)
+    allowScroll()
+  }
   const confirmVote = () =>{
     let candidate = modalData.map((item)=>item.id) 
     if(user.cpf){
@@ -99,7 +103,7 @@ const CandidatesPage = () => {
           <p>Deseja votar em {modalData.map((item)=>item.label)}?</p>
       </div>
       <div className="__btns">
-      <button className="cancel" onClick={()=>setModal(false)}>
+      <button className="cancel" onClick={()=>cancelVote()}>
           Cancelar
         </button>
         <button className="confirm" onClick={()=>confirmVote()}>
