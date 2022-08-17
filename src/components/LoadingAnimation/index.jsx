@@ -2,9 +2,11 @@ import React,{useContext} from 'react'
 import Styles from './styled'
 import { AuthContext } from '../../providers/auth'
 import eventLogo from '../../img/event_logo.png'
+import { useScrollBlock } from '../../hooks/useScrollBlock' 
 const LoadingAnimation = () => {
 const {contentLoaded} = useContext(AuthContext)
-
+const [blockScroll, allowScroll] = useScrollBlock()
+  contentLoaded? allowScroll():blockScroll()
   return (
     <Styles isLoaded={contentLoaded}>
     <div className="load__container">
