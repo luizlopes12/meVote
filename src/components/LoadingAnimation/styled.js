@@ -59,7 +59,7 @@ const Styles = styled.section`
                 width: 70%;
                 line-height: 1.8rem;
                 color: #FF7528;
-                font-size: 1.4rem;
+                font-size: 1.8rem;
                 font-weight: 600;
             }
             .__subtitle{
@@ -86,8 +86,8 @@ const Styles = styled.section`
     left:10%;
 }
 .circle{
-    width:40px;
-    height:40px;
+    width:20px;
+    height:20px;
     position: absolute;
     border-radius: 50%;
     background-color: #dbdbdb;
