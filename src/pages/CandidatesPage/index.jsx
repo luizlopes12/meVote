@@ -34,7 +34,6 @@ const CandidatesPage = () => {
     setModal(true)
   }
   modal ? blockScroll() : allowScroll()
-  contentLoaded ? allowScroll() : blockScroll()
 
   const confirmModal = () =>{
     setSuccessModal(true)
@@ -58,7 +57,7 @@ const CandidatesPage = () => {
 
   }
   return (
-    <Styles modalDisplay={modal} scrollLocation={window.scrollY} successModalDisplay={successModal}>
+    <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
       
       <section className='info'>
         <div className="__container">
