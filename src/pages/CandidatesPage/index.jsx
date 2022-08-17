@@ -28,7 +28,7 @@ const CandidatesPage = () => {
     }
 
 
-  },[user.cpf,userWasVoted])
+  },[user.cpf,userWasVoted,setContentLoaded])
   const openModal = (item) =>{
     setModalData([item])
     setModal(true)
