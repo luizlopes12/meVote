@@ -74,7 +74,7 @@ const Styles = styled.section`
     height:60px;
     position: absolute;
     left:50%;
-    top:80%;
+    top:70%;
     transform: translate(-50%, -50%);
 }
 .loading span{
