@@ -41,7 +41,7 @@ const shadow = keyframes`
 `;
 const Styles = styled.section`
     .load__container{
-        animation: ${props => (props.isLoaded ? css`${loadEnding} 4s ease-in-out` : '')};
+        animation: ${props => (props.isLoaded ? css`${loadEnding} .5s ease-in-out` : '')};
         transform: ${props => (props.isLoaded ? 'translateY(-100%)' : '')};
         position: absolute;
         width: 100%;
