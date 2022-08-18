@@ -21,23 +21,34 @@ const RankingPage = () => {
               ({votesData.length} Participantes)
           </div>
       </header>
-      <section className="listing">
-        <div className="__header">
-        {votesData.map((item)=>{
-          <>
-          <div className="info1">
-          <p>Equipe</p>
-          {item.label}
+        <div className="list">
+        <div className="row header">
+          <div className="column">Posição</div>
+          <div className="column">Equipe</div>
+          <div className="column">Votos</div>
         </div>
-        <div className="info2">
-          <p>Votos</p>
-          {item.votes}
-        </div>
-      </>
-        })}
+          {votesData.length < 1 ? (
+                <div className="loading">
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="shadow"></div>
+                <div className="shadow"></div>
+                <div className="shadow"></div>
+                <span>Carregando</span>
+            </div>
+          ):(
+            votesData.map((candidate, key) =>(
+              <div className="row">
+              <div className="column">{key + 1}°</div>
+              <div className="column">{candidate.label}</div>
+              <div className="column">{candidate.votes}</div>
+            </div>
+              ))
+          )}
+
 
         </div>
-      </section>
     </Styles>
   )
 }
