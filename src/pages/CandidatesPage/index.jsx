@@ -62,7 +62,6 @@ const CandidatesPage = () => {
   }
   return (
     <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
-      
       <section className='info'>
         <div className="__container">
           <div className="__options">
@@ -81,6 +80,7 @@ const CandidatesPage = () => {
         </section>
         </section>
       ):(
+      candidatesData.length > 0 ? (
         <section className='list'>
         {candidatesData.map((item, key)=>(
         <div className="__card" id={key}>
@@ -95,6 +95,21 @@ const CandidatesPage = () => {
       </div>
       ))}
       </section>
+      ):(
+        <section className='list'>
+    <div className="loading">
+        <div className="circle"></div>
+        <div className="circle"></div>
+        <div className="circle"></div>
+        <div className="shadow"></div>
+        <div className="shadow"></div>
+        <div className="shadow"></div>
+        <span>Carregando</span>
+    </div>
+    </section>
+
+      )
+
       )}
       {modal && (
       <div className="confirmModal">
