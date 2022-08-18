@@ -60,6 +60,7 @@ const CandidatesPage = () => {
       })
     }
   }
+  var LocalHours = new Date().getHours()
   return (
     <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
       <section className='info'>
@@ -73,43 +74,50 @@ const CandidatesPage = () => {
           </div>
         </div>
       </section>
-      {userWasVoted ? (
-      <section className='list'>
-        <section className="voted">
-          Você já votou!
-        </section>
-        </section>
+      {LocalHours > 18 || LocalHours < 9 ? (
+              <section className='list'>
+              <section className="voted disponivel">
+                Voto disponível apenas entre 9h e 18h
+              </section>
+              </section>
       ):(
-      candidatesData.length > 0 ? (
-        <section className='list'>
-        {candidatesData.map((item, key)=>(
-        <div className="__card" id={key}>
-        <div className="candidate">
-        <div className="__image">
-        <p className='__lbl'>{item.label}</p>
+        userWasVoted ? (
+          <section className='list'>
+            <section className="voted">
+              Você já votou!
+            </section>
+            </section>
+          ):(
+          candidatesData.length > 0 ? (
+            <section className='list'>
+            {candidatesData.map((item, key)=>(
+            <div className="__card" id={key}>
+            <div className="candidate">
+            <div className="__image">
+            <p className='__lbl'>{item.label}</p>
+            </div>
+            <div className="__text">
+            </div>
+            </div>
+            <button className='voteBtn' onClick={()=>openModal(item)}>Votar</button>
+          </div>
+          ))}
+          </section>
+          ):(
+            <section className='list'>
+            <div className="loading">
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="shadow"></div>
+            <div className="shadow"></div>
+            <div className="shadow"></div>
+            <span>Carregando</span>
         </div>
-        <div className="__text">
-        </div>
-        </div>
-        <button className='voteBtn' onClick={()=>openModal(item)}>Votar</button>
-      </div>
-      ))}
-      </section>
-      ):(
-        <section className='list'>
-    <div className="loading">
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="shadow"></div>
-        <div className="shadow"></div>
-        <div className="shadow"></div>
-        <span>Carregando</span>
-    </div>
-    </section>
-
-      )
-
+        </section>
+    
+          )
+          )
       )}
       {modal && (
       <div className="confirmModal">

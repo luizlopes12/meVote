@@ -137,6 +137,12 @@ const Styles = styled.section`
             display: flex;
             justify-content: center;
             font-size: 1.5rem;
+            &.disponivel{
+                margin: auto;
+            max-width: 250px;
+            text-align: center;
+            font-size: 1.2rem;
+            }
         }
     }
     .confirmModal{
