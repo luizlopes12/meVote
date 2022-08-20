@@ -84,7 +84,7 @@ const CandidatesPage = () => {
         userWasVoted ? (
           <section className='list'>
             <section className="voted">
-              Você já votou!
+              Seu voto já foi registrado, obrigado!
             </section>
             </section>
           ):(

@@ -133,7 +133,9 @@ const Styles = styled.section`
             }
         }
         .voted{
-            width: 100%;
+            width: 90%;
+            text-align: center;
+            margin: auto;
             display: flex;
             justify-content: center;
             font-size: 1.5rem;
