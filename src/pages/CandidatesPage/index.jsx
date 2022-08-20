@@ -60,7 +60,8 @@ const CandidatesPage = () => {
       })
     }
   }
-  var LocalHours = new Date().getHours()
+  var localHours = new Date().getHours() + new Date().getMinutes();
+  console.log(localHours);
   return (
     <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
       <section className='info'>
@@ -74,7 +75,7 @@ const CandidatesPage = () => {
           </div>
         </div>
       </section>
-      {LocalHours > 18 || LocalHours < 9 ? (
+      {localHours > 18 || localHours < 9 ? (
               <section className='list'>
               <section className="voted disponivel">
                 Voto disponível apenas entre 9h e 18h
