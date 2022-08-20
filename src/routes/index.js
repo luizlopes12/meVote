@@ -14,7 +14,7 @@ const RoutesManager = () => {
     <Router>
       <Routes>
         <Route path="/" element={<><SplashPage /> <CPFPage/></>} />
-        <Route path="/adm/ranking" element={<RankingPage/>} />
+        <Route path="/adm/rnkrgt" element={<RankingPage/>} />
         <Route path="/candidates" element={user.cpf.length > 1 ? <><CandidatesPage/></>:<Navigate to="/" />} />
       </Routes>
     </Router>

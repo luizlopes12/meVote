@@ -11,7 +11,7 @@ const CPFPage = () => {
                 Bem-vindo ao <b>meVote</b>
             </p>
         </section>
-        <CpfInput/>
+        {CpfInput()}
         <footer className='footer'> 
             <b>created by Fatec Registro</b>
         </footer>
