@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Styles from './styled'
 const CpfInput = () => {
   const [inputValue, setInputValue] = useState('')
-  const {user, setUser} = useContext(AuthContext)
+  const {setUser} = useContext(AuthContext)
   const [cpfVerified, setCpfVerified] = useState(false)
   const verifyCPF = (cpf) =>{
     cpf = cpf.replace(/[^\d]+/g,'');	
