@@ -33,6 +33,7 @@ const shadow = keyframes`
 const Styles = styled.section`
     background: #fff;
     min-height: 100vh;
+    padding-bottom: 50px;
     .header{
     background:linear-gradient(335.05deg,rgba(255,209,0,0.5) 44.42%,rgba(244,228,9,0.5) 68.64%,rgba(255,247,136,0.5) 90.82%),#F4E409;
     border-radius:  0 0 25px 25px;
