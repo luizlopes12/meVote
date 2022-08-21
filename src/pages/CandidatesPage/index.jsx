@@ -74,7 +74,7 @@ const CandidatesPage = () => {
           </div>
         </div>
       </section>
-      {localHours >= 18 || localHours <= 9 ? (
+      {localHours >= 18 || localHours < 9 ? (
               <section className='list'>
               <section className="voted disponivel">
                 Voto disponível apenas entre 9h e 18h
