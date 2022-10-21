@@ -5,4 +5,4 @@ Utilizando Node.js e React.js com Banco de dados MySql
 
 Front end hospedado temporariamente na Vercel e Backend na Heroku(Até o final do evento).
 
-Banckend em: 
+Banckend disponível em: https://github.com/luizlopes12/meVote-backend
