@@ -2,3 +2,5 @@ Aplicação para apuração de votos feito para o festival de cerveja "Encontro 
 
 
 Utilizando Node.js e React.js com Banco de dados MySql 
+
+Front end hospedado temporariamente na Vercel e Backend na Heroku
