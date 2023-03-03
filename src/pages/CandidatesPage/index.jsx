@@ -77,7 +77,7 @@ const CandidatesPage = () => {
           </div>
         </div>
       </section>
-      {(localHours >= 18 || localHours < 9) &&  currentDay != 11  ? (
+      {(localHours >= 18 || localHours < 9) &&  currentDay != 11 &&  currentMonth != '03' ? (
               <section className='list'>
               <section className="voted disponivel">
                 Voto disponível apenas entre 9h e 18h do dia {currentDay}/{currentMonth}/{currentYear}
