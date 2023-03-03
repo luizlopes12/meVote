@@ -61,7 +61,9 @@ const CandidatesPage = () => {
     }
   }
   var localHours = new Date().getHours()
-  var currentDay = new Date().getDay()
+  var currentYear = new Date().getFullYear()
+  var currentMonth = new Date().getMonth().padStart(2, '0')
+  var currentDay = new Date().getDay().padStart(2, '0')
   return (
     <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
       <section className='info'>
@@ -78,7 +80,7 @@ const CandidatesPage = () => {
       {(localHours >= 18 || localHours < 9) &&  currentDay != 11  ? (
               <section className='list'>
               <section className="voted disponivel">
-                Voto disponível apenas entre 9h e 18h do dia 
+                Voto disponível apenas entre 9h e 18h do dia {currentDay}/{currentMonth}/{currentYear}
               </section>
               </section>
       ):(
