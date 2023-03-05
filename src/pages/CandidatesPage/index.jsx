@@ -63,7 +63,7 @@ const CandidatesPage = () => {
   
   var localHours = new Date().getHours()
   var currentYear = new Date().getFullYear()
-  var currentMonth = new Date().getMonth().toString().padStart( 2, '0')
+  var currentMonth = (new Date().getMonth()+1).toString().padStart( 2, '0')
   var currentDay = new Date().getDay().toString().padStart( 2,'0')
 
   return (
@@ -79,10 +79,10 @@ const CandidatesPage = () => {
           </div>
         </div>
       </section>
-      {(localHours >= 18 || localHours < 9) &&  currentDay != 11 &&  currentMonth != '03' ? (
+      {(localHours >= 18 || localHours < 9) &&  currentDay != '11' &&  currentMonth != '03' ? (
               <section className='list'>
               <section className="voted disponivel">
-                Voto disponível apenas entre 9h e 18h do dia {currentDay}/{currentMonth}/{currentYear}
+                Voto disponível apenas entre 9h e 18h do dia 11/03/2023
               </section>
               </section>
       ):(
