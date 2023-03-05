@@ -60,10 +60,12 @@ const CandidatesPage = () => {
       })
     }
   }
+  
   var localHours = new Date().getHours()
   var currentYear = new Date().getFullYear()
-  var currentMonth = new Date().getMonth().padStart(2, '0')
-  var currentDay = new Date().getDay().padStart(2, '0')
+  var currentMonth = new Date().getMonth().toString().padStart( 2, '0')
+  var currentDay = new Date().getDay().toString().padStart( 2,'0')
+
   return (
     <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
       <section className='info'>
