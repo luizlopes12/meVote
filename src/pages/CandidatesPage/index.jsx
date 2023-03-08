@@ -60,11 +60,11 @@ const CandidatesPage = () => {
       })
     }
   }
-  
-  var localHours = new Date().getHours()
-  var currentYear = new Date().getFullYear()
-  var currentMonth = (new Date().getMonth()+1).toString().padStart( 2, '0')
-  var currentDay = new Date().getDate().toString().padStart( 2,'0')
+  var currentDate = new Date().getTimezoneOffset()
+  var localHours = currentDate.getHours()
+  var currentYear = currentDate.getFullYear()
+  var currentMonth = (currentDate.getMonth()+1).toString().padStart( 2, '0')
+  var currentDay = currentDate.getDate().toString().padStart( 2,'0')
   console.log('getDate')
   console.log(currentDay)
   console.log(currentMonth)
@@ -84,7 +84,7 @@ const CandidatesPage = () => {
           </div>
         </div>
       </section>
-      {(localHours >= 18 || localHours < 9) &&  currentDay != '11' &&  currentMonth != '03' ? (
+      {(localHours >= 18 || localHours < 9) && (currentDay != '11' &&  currentMonth != '03') ? (
               <section className='list'>
               <section className="voted disponivel">
                 Voto disponível apenas entre 9h e 18h do dia 11/03/2023
