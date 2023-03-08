@@ -61,7 +61,7 @@ const CandidatesPage = () => {
     }
   }
   var timeZone = "America/Sao_Paulo";
-  var currentDate = new Date('2023-03-11T15:00:00');
+  var currentDate = new Date();
   var formatter = new Intl.DateTimeFormat("pt-BR", {
     timeZone: timeZone,
     year: "numeric",
@@ -79,8 +79,6 @@ const CandidatesPage = () => {
   var currentYear = currentDate.getFullYear()
   var currentMonth = (currentDate.getMonth()+1).toString().padStart( 2, '0')
   var currentDay = currentDate.getDate().toString().padStart( 2,'0')
-  console.log(localHours >= 18 || localHours < 9)
-  console.log(currentDay != '11' ||  currentMonth != '03')
 
   return (
     <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
