@@ -60,7 +60,7 @@ const CandidatesPage = () => {
       })
     }
   }
-  var currentDate = new Date().getTimezoneOffset()
+  var currentDate = new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"})
   var localHours = currentDate.getHours()
   var currentYear = currentDate.getFullYear()
   var currentMonth = (currentDate.getMonth()+1).toString().padStart( 2, '0')
