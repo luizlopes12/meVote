@@ -79,11 +79,7 @@ const CandidatesPage = () => {
   var currentYear = currentDate.getFullYear()
   var currentMonth = (currentDate.getMonth()+1).toString().padStart( 2, '0')
   var currentDay = currentDate.getDate().toString().padStart( 2,'0')
-  console.log('getDate')
-  console.log(currentDay)
-  console.log(currentMonth)
-  console.log(typeof(currentMonth))
-  console.log(typeof(currentDay))
+  console.log((localHours >= 18 || localHours < 9) && (currentDay != '11' &&  currentMonth != '03') )
 
   return (
     <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
