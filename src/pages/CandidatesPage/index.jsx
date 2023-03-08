@@ -64,7 +64,7 @@ const CandidatesPage = () => {
   var localHours = new Date().getHours()
   var currentYear = new Date().getFullYear()
   var currentMonth = (new Date().getMonth()+1).toString().padStart( 2, '0')
-  var currentDay = new Date().getDay()
+  var currentDay = new Date().getDate().toString().padStart( 2,'0')
   console.log(currentDay)
   console.log(currentMonth)
   console.log(typeof(currentMonth))
@@ -83,7 +83,7 @@ const CandidatesPage = () => {
           </div>
         </div>
       </section>
-      {(localHours >= 18 || localHours < 9) &&  currentDay != 11 &&  currentMonth != '03' ? (
+      {(localHours >= 18 || localHours < 9) &&  currentDay != '11' &&  currentMonth != '03' ? (
               <section className='list'>
               <section className="voted disponivel">
                 Voto disponível apenas entre 9h e 18h do dia 11/03/2023
