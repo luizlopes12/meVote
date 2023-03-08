@@ -65,6 +65,10 @@ const CandidatesPage = () => {
   var currentYear = new Date().getFullYear()
   var currentMonth = (new Date().getMonth()+1).toString().padStart( 2, '0')
   var currentDay = new Date().getDay().toString().padStart( 2,'0')
+  console.log(currentDay)
+  console.log(currentMonth)
+  console.log(typeof(currentMonth))
+  console.log(typeof(currentDay))
 
   return (
     <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
