@@ -60,7 +60,21 @@ const CandidatesPage = () => {
       })
     }
   }
-  var currentDate = new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"})
+  var timeZone = "America/Sao_Paulo";
+  var currentDate = new Date();
+  var formatter = new Intl.DateTimeFormat("pt-BR", {
+    timeZone: timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    hour12: false
+  });
+  
+  var formattedDate = formatter.format(currentDate);
+  
   var localHours = currentDate.getHours()
   var currentYear = currentDate.getFullYear()
   var currentMonth = (currentDate.getMonth()+1).toString().padStart( 2, '0')
