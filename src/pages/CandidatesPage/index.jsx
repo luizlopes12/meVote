@@ -96,7 +96,7 @@ const CandidatesPage = () => {
       {!(localHours >= 15 || localHours < 17) && (currentDay != '12' ||  currentMonth != '03') ? (
               <section className='list'>
               <section className="voted disponivel">
-                Voto disponível apenas entre 9h e 18h do dia 11/03/2023
+                Voto disponível apenas entre 15h e 17h do dia 12/03/2023
               </section>
               </section>
       ):(
