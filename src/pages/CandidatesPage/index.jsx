@@ -61,7 +61,7 @@ const CandidatesPage = () => {
     }
   }
   var timeZone = "America/Sao_Paulo";
-  var currentDate = new Date('2022-03-12');
+  var currentDate = new Date();
   var formatter = new Intl.DateTimeFormat("pt-BR", {
     timeZone: timeZone,
     year: "numeric",
