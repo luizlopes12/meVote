@@ -61,7 +61,7 @@ const CandidatesPage = () => {
     }
   }
   var timeZone = "America/Sao_Paulo";
-  var currentDate = new Date();
+  var currentDate = new Date('2022-03-12');
   var formatter = new Intl.DateTimeFormat("pt-BR", {
     timeZone: timeZone,
     year: "numeric",
@@ -93,7 +93,7 @@ const CandidatesPage = () => {
           </div>
         </div>
       </section>
-      {!(localHours >= 18 || localHours < 9) && (currentDay != '11' ||  currentMonth != '03') ? (
+      {!(localHours >= 15 || localHours < 17) && (currentDay != '12' ||  currentMonth != '03') ? (
               <section className='list'>
               <section className="voted disponivel">
                 Voto disponível apenas entre 9h e 18h do dia 11/03/2023
