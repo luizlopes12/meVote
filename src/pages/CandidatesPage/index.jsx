@@ -79,7 +79,7 @@ const CandidatesPage = () => {
   var currentYear = currentDate.getFullYear()
   var currentMonth = (currentDate.getMonth()+1).toString().padStart( 2, '0')
   var currentDay = currentDate.getDate().toString().padStart( 2,'0')
-  
+
   return (
     <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
       <section className='info'>
@@ -96,7 +96,7 @@ const CandidatesPage = () => {
       {!(localHours >= 15 && (localHours < 17 && currentDate.getMinutes() <= 10)) && (currentDay != '12' ||  currentMonth != '03') ? (
               <section className='list'>
               <section className="voted disponivel">
-                Voto disponível apenas entre 15h e 17h do dia 12/03/2023
+                Voto disponível apenas entre 15h e 17:10 do dia 12/03/2023
               </section>
               </section>
       ):(
