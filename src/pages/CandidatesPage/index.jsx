@@ -80,6 +80,8 @@ const CandidatesPage = () => {
   var currentMonth = (currentDate.getMonth()+1).toString().padStart( 2, '0')
   var currentDay = currentDate.getDate().toString().padStart( 2,'0')
 
+  console.log(currentDate)
+
   return (
     <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
       <section className='info'>
