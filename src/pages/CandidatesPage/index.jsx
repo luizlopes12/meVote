@@ -82,7 +82,7 @@ const CandidatesPage = () => {
 
   console.log(currentDate.getMinutes())
   console.log(localHours)
-  console.log(!(localHours >= 15 || localHours < 17) && (currentDay != '12' ||  currentMonth != '03'))
+  console.log(!(localHours >= 15 && (localHours < 17 && currentDate.getMinutes() <= 10)) && (currentDay != '12' ||  currentMonth != '03'))
   return (
     <Styles modalDisplay={modal} contentLoaded={contentLoaded} scrollLocation={window.scrollY} successModalDisplay={successModal}>
       <section className='info'>
