@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 const API = axios.create({
-    baseURL: 'https://sore-pink-scarab-tutu.cyclic.app' 
+    baseURL: 'https://upset-rose-nematode.cyclic.app' 
 })
 
 

@@ -93,7 +93,8 @@ const CandidatesPage = () => {
           </div>
         </div>
       </section>
-      {localHours > 17 || currentDay != '21' || currentDay != '20' ?(
+      {/* localHours > 17 || currentDay != '21' || currentDay != '20' */}
+      { currentDay != '18' ?(
               <section className='list'>
               <section className="voted disponivel">
                 Voto disponível apenas até 17h entre os dias 20 e 21 de Abril
