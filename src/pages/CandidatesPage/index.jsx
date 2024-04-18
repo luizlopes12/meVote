@@ -93,10 +93,10 @@ const CandidatesPage = () => {
           </div>
         </div>
       </section>
-      {localHours > 17 || currentDay != '12' ?(
+      {localHours > 17 || currentDay != '21' || currentDay != '20' ?(
               <section className='list'>
               <section className="voted disponivel">
-                Voto disponível apenas entre 15h e 17:10h do dia 12/03/2023
+                Voto disponível apenas até 17h entre os dias 20 e 21 de Abril
               </section>
               </section>
       ):(
